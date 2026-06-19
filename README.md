@@ -186,3 +186,248 @@ $
 
 
 ```
+
+
+### Part2 
+
+
+```bash
+
+### exercise1
+
+
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git init 
+Reinitialized existing Git repository in C:/Users/Malaika/cloned-hirwa-exercise/Git-exercise/.git/
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch--show-current
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch --show-current
+main
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git checkout -b ft/new-featuree
+Switched to a new branch 'ft/new-featuree'
+PS 
+
+##exercise2,3,4,5,6,7,8,9,10
+###----------------------------
+
+
+C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git add feature.txt
+ create mode 100644 feature.txt
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git checkout main
+M       README.md
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch --show-current
+main
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> echo "wellcome back to page" >readme.txt
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git add readme.txt
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git commit -m "updated project readme"
+[main f3ec160] updated project readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.txt
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git push -u origin ft/new-feature 
+error: src refspec ft/new-feature does not match any
+remote: Permission to HIRWA13/Git-exercise.git denied to GODisALL-FriendOfJesus.
+fatal: unable to access 'https://github.com/HIRWA13/Git-exercise/': The requested URL returned error: 403
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git remote add "https://github.com/GODisALL-FriendOfJesus/cloned-hirwa-exercise.git"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch -m ft/new-feature
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch
+  ft/branch
+error: the branch 'ft/new-featuree' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D ft/new-featuree'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git push -u origin ft/new-featuree
+info: please complete authentication in your browser...
+remote: Permission to HIRWA13/Git-exercise.git denied to GODisALL-FriendOfJesus.
+fatal: unable to access 'https://github.com/HIRWA13/Git-exercise/': The requested URL returned error: 403
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git push -u origin ft/new-featuree
+info: please complete authentication in your browser...
+remote: Permission to HIRWA13/Git-exercise.git denied to GODisALL-FriendOfJesus.
+fatal: unable to access 'https://github.com/HIRWA13/Git-exercise/': The requested URL returned error: 403
+info: please complete authentication in your browser...
+remote: Permission to HIRWA13/Git-exercise.git denied to GODisALL-FriendOfJesus.
+fatal: unable to access 'https://github.com/HIRWA13/Git-exercise/': The requested URL returned error: 403rcise.git
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git push -u origin ft/new-featuree
+Enumerating objects: 79, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (79/79), 20.75 KiB | 518.00 KiB/s, done.
+Total 79 (delta 26), reused 57 (delta 18), pack-reused 0 (from 0)
+To https://github.com/GODisALL-FriendOfJesus/cloned-hirwa-exercise.git
+branch 'ft/new-featuree' set up to track 'origin/ft/new-featuree'.
+warning: deleting branch 'ft/new-featuree' that has been merged to
+         'refs/remotes/origin/ft/new-featuree', but not yet merged to HEAD
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch
+  ft/branch
+* ft/new-feature
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch -d ft/new-feature
+error: cannot delete branch 'ft/new-feature' used by worktree at 'C:/Users/Malaika/cloned-hirwa-exercise/Git-exercise'
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git checkout -b ft/new-branch-from-commit HEAD~2
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git stash
+Saved working directory and index state WIP on ft/new-feature: f3ec160 updated project readme
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git checkout -b ft/new-branch-from-commit HEAD~2
+Switched to a new branch 'ft/new-branch-from-commit'
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git checkout main
+Switched to a new branch 'main'
+Updating e4744a0..3c29c44
+ test2.md     | 0
+ test3.md     | 0
+ test4.md     | 0
+ test5.md     | 1 +
+ 6 files changed, 2 insertions(+)
+ create mode 100644 test2.md
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+ create mode 100644 test5.md
+ create mode 100644 unwanted.txt
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git rebase main
+Current branch ft/new-branch-from-commit is up to date.
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch -m ft/new-branch-from-commit ft/improved-branch-name
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git branch
+  ft/branch
+* ft/improved-branch-name
+  ft/new-feature
+  main
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git log --online
+fatal: unrecognized argument: --online
+PS C:\Users\Malaika\cloned-hirwa-exercise\Git-exercise> git log --oneline
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+3083f66 Update README
+826eba3 Update README
+86ec50c refactor: update README
+be0f35c Update README.md
+6483bd6 Update README.md
+9dbca11 Update README.md
+7cd7a29 Merge pull request #1 from HIRWA13/chore/refine-exercises
+bf8e72c Update README.md
+e632651 refactor: clean and update exercise structure
+aabb257 refactor: create branch from a commit
+4f71b9f refactor: update exercises
+:
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+3083f66 Update README
+826eba3 Update README
+86ec50c refactor: update README
+be0f35c Update README.md
+6483bd6 Update README.md
+9dbca11 Update README.md
+7cd7a29 Merge pull request #1 from HIRWA13/chore/refine-exercises
+bf8e72c Update README.md
+e632651 refactor: clean and update exercise structure
+aabb257 refactor: create branch from a commit
+4f71b9f refactor: update exercises
+:
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+3083f66 Update README
+826eba3 Update README
+86ec50c refactor: update README
+be0f35c Update README.md
+6483bd6 Update README.md
+9dbca11 Update README.md
+:
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+:
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+:
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+:
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+3083f66 Update README
+826eba3 Update README
+86ec50c refactor: update README
+be0f35c Update README.md
+6483bd6 Update README.md
+9dbca11 Update README.md
+7cd7a29 Merge pull request #1 from HIRWA13/chore/refine-exercises
+:...skipping...
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+3083f66 Update README
+826eba3 Update README
+86ec50c refactor: update README
+be0f35c Update README.md
+6483bd6 Update README.md
+9dbca11 Update README.md
+7cd7a29 Merge pull request #1 from HIRWA13/chore/refine-exercises
+bf8e72c Update README.md
+e632651 refactor: clean and update exercise structure
+aabb257 refactor: create branch from a commit
+4f71b9f refactor: update exercises
+6448eeb refactor: update readme file
+013976b refactor: update exercises
+23ea742 refactor: update and remove mistakes
+:...skipping...
+3c29c44 (HEAD -> ft/improved-branch-name, main) content of test5 uptodate
+d3ac84f unwanted commit
+b544c40 created fourth file
+f7c02de created third file
+fe0d9a2 chore:create another file
+0650585 chore:create initial file
+e4744a0 (origin/main, origin/HEAD) Update README.md
+3083f66 Update README
+826eba3 Update README
+86ec50c refactor: update README
+be0f35c Update README.md
+6483bd6 Update README.md
+9dbca11 Update README.md
+7cd7a29 Merge pull request #1 from HIRWA13/chore/refine-exercises
+bf8e72c Update README.md
+e632651 refactor: clean and update exercise structure
+aabb257 refactor: create branch from a commit
+4f71b9f refactor: update exercises
+6448eeb refactor: update readme file
+013976b refactor: update exercises
+23ea742 refactor: update and remove mistakes
+248fb71 refactor: Update Exercises
+6e0e33f refactor: Update README.md
+```
