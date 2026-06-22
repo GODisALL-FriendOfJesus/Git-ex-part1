@@ -431,3 +431,169 @@ aabb257 refactor: create branch from a commit
 248fb71 refactor: Update Exercises
 6e0e33f refactor: Update README.md
 ```
+### PART 3
+```bash 
+
+##exercise1
+ Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git branch --show-current
+main
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git add test3.md
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git stash
+Saved working directory and index state WIP on main: 6694187 Secong part is done for challenges is updated but GODisALL
+
+##exercise2
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git stash list
+stash@{0}: WIP on main: 45b697b GODisALL part3 first exercise
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git stash pop stash@{0}
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{0} (c8e77f9ddee0d26a1277e2c3f600ab6952b775bb)
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git stash list
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ 
+###exercise 3
+
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git checkout -b feature/new
+Switched to a new branch 'feature/new'
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git add projectG.md
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git commit -m "Changes are created "
+[main d9aa679] Changes are created
+ 1 file changed, 2 insertions(+)
+ create mode 100644 projectG.md
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git checkout  feature/new
+M       README.md
+Switched to branch 'feature/new'
+
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git add projectG.md
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git commit -m "Changes are created chnges G"
+[feature/new 542eb93] Changes are created chnges G
+ 1 file changed, 2 insertions(+)
+ create mode 100644 projectG.md
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git merge feature/new
+Auto-merging projectG.md
+CONFLICT (add/add): Merge conflict in projectG.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main|MERGING)
+$ it add projectG.md
+bash: it: command not found
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main|MERGING)
+$ git add projectG.md
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main|MERGING)
+$ git commit -m "conflict solved GODisALL"
+[main 7535613] conflict solved GODisALL
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$
+
+###exercise4
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiffNo files need merging
+
+### exercise 5
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git checkout  feature/new
+M       README.md
+Switched to branch 'feature/new'
+
+##exercise 6
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ mkdir tmp
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ 
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ touch tmp/temporary.txt
+##exercise 7
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git tag v1.0
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git tag
+v1.0
+###exercise 8
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git tag
+v1.0
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 542eb93)
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ git tag
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (feature/new)
+$ 
+## exercise 9
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ git push
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (15/15), 1.45 KiB | 296.00 KiB/s, done.
+Total 15 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/GODisALL-FriendOfJesus/Git-ex-part1.git
+   6694187..7535613  main -> main
+
+Malaika@DESKTOP-N7DTFKE MINGW64 ~/cloned-hirwa-exercise/Git-exercise-part1 (main)
+$ 
+```
